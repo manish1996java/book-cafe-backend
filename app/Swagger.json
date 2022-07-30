@@ -1,0 +1,58 @@
+{
+    "openapi":"3.0.2",
+    "info": {
+      "title":"Test Api",
+      "version":"1.0"
+    },
+    "servers": [
+      {"url":"https://localhost:4500"}
+    ],
+    "paths": {
+        "/user/login": {
+            "get": {
+                "description": "Login user route",
+                "parameters": [
+                    {
+                        "name": "userId",
+                        "in": "query",
+                        "required": true,
+                        "description": "User Login Id",
+                        "schema":{
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema":{
+                            "type": "string"
+                        },
+                        "description": "User Login Password"
+                    }
+                  ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json":{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/user/signup": {
+            "get": {
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+  }
